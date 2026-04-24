@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "notification_shashin"
 include(":app")
- 
+include(":network")
