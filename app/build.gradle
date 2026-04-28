@@ -3,25 +3,25 @@ plugins {
 }
 
 android {
-    namespace = "com.example.notification_shashin"
+    namespace = 'com.example.notification_shashin'
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.notification_shashin"
+        applicationId = 'com.example.notification_shashin'
         minSdk = 29
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = '1.0'
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            minifyEnabled false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile('proguard-android-optimize.txt'),
+                'proguard-rules.pro'
             )
         }
     }
@@ -32,6 +32,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation project(":network")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
